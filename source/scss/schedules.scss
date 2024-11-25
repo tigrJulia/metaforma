@@ -1,0 +1,152 @@
+.schedules {
+    padding: 0 24px;
+    @media screen and (max-width: 468px) {padding: 0 10px 32px;}
+    &__title {margin-bottom: 30px;}
+    .row {
+        display: flex;
+        gap: 40px;
+        margin: 0 0 48px;
+        width: 100%;
+        @media screen and (max-width: 1339px) {flex-direction: column;}
+    }
+}
+.type {
+    width: 293px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    @media screen and (max-width: 1339px) {flex-direction: row; width: auto;}
+    .kind {
+        display: flex;
+        gap: 14px;
+        @media screen and (max-width: 1339px) {width: 50%;}
+        &__radio {
+            display: none;
+            cursor: pointer;
+            &:checked {
+                & + .kind__radio-custom .input {display: none;
+                    &-checked {display: block;}
+                }
+            }
+            &-custom {
+                cursor: pointer;
+                .input {
+                    &-checked {display: none; transition: all ease .3s;}
+                }
+            }
+        }
+        &__label {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;        
+            h5 {
+                font-size: 14px;
+                line-height: 24px;
+                margin: 0;
+            }
+            p {
+                font-size: 12px;
+                opacity: .65;
+            }
+        }
+    }
+}
+.session {
+    flex: 1 1 ;
+    padding: 0 0 40px;
+    border-bottom: 1px solid var(--white-white-20, #ffffff33);
+    &__title {margin-bottom: 15px;}
+    .row {
+        display: flex;
+        gap: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin: 0 0 30px;
+        width: 100%;
+        @media screen and (max-width: 1012px) {flex-wrap: wrap; justify-content: start;}
+    }
+    &__add {
+        border-radius: 10px;
+        background: var(--Accent-Orange, #DD5313);
+        color: #fff;
+        padding: 10.5px 25px;
+        font-size: 14px;
+        max-width: 77px;
+        &.disabled {
+            background: var(--Black-Deep-blue, #2E3745);
+            color: rgba(255, 255, 255, .6);
+            pointer-events: none;
+        }
+        &.hover {
+            &:hover {
+                background: #bb4b17;
+                transition: all ease .3s;
+            }
+        }
+    }
+    &__subtitle {
+        margin-bottom: 15px;
+    }
+}
+.on {
+    padding: 12px;
+    width: 91px;
+    overflow: hidden;
+    &__input {
+        background-color: transparent;
+        color: #FFF;
+        font-size: 12px;
+        font-weight: 700;
+    }
+}
+.date {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    width: 25%;
+    min-width: 230px;
+    @media screen and (max-width: 341px) {width: 100%;}
+    &__input {
+        background-color: transparent;
+        color: #FFF;
+        width: 100%;
+        font-size: 12px;
+        &::-webkit-calendar-picker-indicator {display: none;}
+    }
+}
+.zone {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    overflow: hidden;
+    background: url("../img/configuration/icon/chevron-down.svg") no-repeat right 12px center, var(--Black-Deep-blue, #2E3745);
+    &__input {
+        background-color: #2E3745;
+    }
+}
+
+.added {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 12px;
+    font-size: 12px;
+    width: 25%;
+    min-width: 230px;
+}
+.timing {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+    @media screen and (max-width: 1012px) {flex-wrap: wrap; justify-content: start;}
+    &__chat {
+        padding: 12px;
+        font-size: 12px;
+        width: 91px;
+        align-self: center;
+    }
+}

@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wdth@62.5..100&family=Noto+Sans:wdth,wght@62.5..100,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+html, body {
+  font-family: "Noto Sans";
+  color: #fff;
+  font-weight: 400;
+  line-height: normal;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+p {
+  margin: 0;
+}
+
+.content {
+  min-height: 100%;
+  margin: 72px 0 0 48px;
+  transition: all ease 0.3s;
+}
+@media screen and (max-width: 511px) {
+  .content {
+    margin: 64px 0 0 0;
+  }
+}
+
+.h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+@media screen and (max-width: 468px) {
+  .h2 {
+    font-size: 18px;
+  }
+}
+
+.h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+@media screen and (max-width: 468px) {
+  .h3 {
+    font-size: 16px;
+  }
+}
+
+.h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+@media screen and (max-width: 468px) {
+  .h4 {
+    font-size: 14px;
+  }
+}
+
+.tab {
+  height: 100%;
+  padding: 14px 25px;
+  text-align: center;
+  font-size: 12px;
+  background: transparent;
+  color: #fff;
+  display: flex;
+  gap: 8px;
+}
+@media screen and (max-width: 468px) {
+  .tab {
+    padding: 14px 13px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .tab {
+    padding-left: 34%;
+  }
+}
+.tab:hover {
+  background: var(--accent-orange-20, rgba(221, 83, 19, 0.2));
+  transition: all ease 0.3s;
+}
+.tab-active {
+  border-bottom: 4px solid var(--Accent-Orange, #DD5313);
+  background: var(--accent-orange-20, rgba(221, 83, 19, 0.2));
+}
+.tab-active .tab__img {
+  display: none;
+}
+.tab-active .tab__img-active {
+  display: block;
+}
+.tabsbar {
+  width: 100%;
+  height: 48px;
+  padding: 0 24px;
+  border-top: 1px solid var(--white-white-20, rgba(255, 255, 255, 0.2));
+  border-bottom: 1px solid var(--white-white-20, rgba(255, 255, 255, 0.2));
+  display: flex;
+}
+@media screen and (max-width: 468px) {
+  .tabsbar {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .tabsbar {
+    flex-direction: column;
+    height: auto;
+  }
+}
+.tab__img-active {
+  display: none;
+}
+
+.cancel {
+  padding: 10.5px 30px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 14px;
+}
+
+.next {
+  border-radius: 10px;
+  background: var(--Accent-Orange, #DD5313);
+  color: #fff;
+  padding: 10.5px 49.5px;
+  font-size: 14px;
+}
+.next.disabled {
+  background: var(--Black-Deep-blue, #2E3745);
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+.next.hover:hover {
+  background: #bb4b17;
+  transition: all ease 0.3s;
+}
+
+.bg-b {
+  border-radius: 10px;
+  background: var(--Black-Deep-blue, #2E3745);
+}

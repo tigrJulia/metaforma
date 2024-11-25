@@ -1,0 +1,195 @@
+.schedules {
+  padding: 0 24px;
+}
+@media screen and (max-width: 468px) {
+  .schedules {
+    padding: 0 10px 32px;
+  }
+}
+.schedules__title {
+  margin-bottom: 30px;
+}
+.schedules .row {
+  display: flex;
+  gap: 40px;
+  margin: 0 0 48px;
+  width: 100%;
+}
+@media screen and (max-width: 1339px) {
+  .schedules .row {
+    flex-direction: column;
+  }
+}
+
+.type {
+  width: 293px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+}
+@media screen and (max-width: 1339px) {
+  .type {
+    flex-direction: row;
+    width: auto;
+  }
+}
+.type .kind {
+  display: flex;
+  gap: 14px;
+}
+@media screen and (max-width: 1339px) {
+  .type .kind {
+    width: 50%;
+  }
+}
+.type .kind__radio {
+  display: none;
+  cursor: pointer;
+}
+.type .kind__radio:checked + .kind__radio-custom .input {
+  display: none;
+}
+.type .kind__radio:checked + .kind__radio-custom .input-checked {
+  display: block;
+}
+.type .kind__radio-custom {
+  cursor: pointer;
+}
+.type .kind__radio-custom .input-checked {
+  display: none;
+  transition: all ease 0.3s;
+}
+.type .kind__label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.type .kind__label h5 {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0;
+}
+.type .kind__label p {
+  font-size: 12px;
+  opacity: 0.65;
+}
+
+.session {
+  flex: 1 1;
+  padding: 0 0 40px;
+  border-bottom: 1px solid var(--white-white-20, rgba(255, 255, 255, 0.2));
+}
+.session__title {
+  margin-bottom: 15px;
+}
+.session .row {
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin: 0 0 30px;
+  width: 100%;
+}
+@media screen and (max-width: 1012px) {
+  .session .row {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+}
+.session__add {
+  border-radius: 10px;
+  background: var(--Accent-Orange, #DD5313);
+  color: #fff;
+  padding: 10.5px 25px;
+  font-size: 14px;
+  max-width: 77px;
+}
+.session__add.disabled {
+  background: var(--Black-Deep-blue, #2E3745);
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+.session__add.hover:hover {
+  background: #bb4b17;
+  transition: all ease 0.3s;
+}
+.session__subtitle {
+  margin-bottom: 15px;
+}
+
+.on {
+  padding: 12px;
+  width: 91px;
+  overflow: hidden;
+}
+.on__input {
+  background-color: transparent;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.date {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  width: 25%;
+  min-width: 230px;
+}
+@media screen and (max-width: 341px) {
+  .date {
+    width: 100%;
+  }
+}
+.date__input {
+  background-color: transparent;
+  color: #FFF;
+  width: 100%;
+  font-size: 12px;
+}
+.date__input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.zone {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  overflow: hidden;
+  background: url("../img/configuration/icon/chevron-down.svg") no-repeat right 12px center, var(--Black-Deep-blue, #2E3745);
+}
+.zone__input {
+  background-color: #2E3745;
+}
+
+.added {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 12px;
+  font-size: 12px;
+  width: 25%;
+  min-width: 230px;
+}
+
+.timing {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1012px) {
+  .timing {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+}
+.timing__chat {
+  padding: 12px;
+  font-size: 12px;
+  width: 91px;
+  align-self: center;
+}

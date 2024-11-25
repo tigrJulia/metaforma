@@ -1,0 +1,333 @@
+.configuration {
+    background: var(--Black-Black, #09091A);
+    width: 100%;
+    min-height: 100vh;
+    .cap {
+        margin: 28px 24px 48px;
+        display: flex;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--white-white-20, rgba(255, 255, 255, 0.20));
+        justify-content: space-between;
+        align-items: center;
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            @media screen and (max-width: 436px) {align-self: end;}
+        }
+        @media screen and (max-width: 468px) {margin: 28px 10px 32px;}
+        @media screen and (max-width: 436px) {flex-direction: column; align-items: baseline; gap: 5px;}
+    }
+    &__title {
+        margin: auto 0;
+    }
+}
+
+.basic {
+    margin: 0 24px 48px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--white-white-20, rgba(255, 255, 255, 0.20));
+    @media screen and (max-width: 468px) {margin: 0 10px 32px;}
+    &__title {margin-bottom: 30px;}
+    .body {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+        @media screen and (max-width: 1068px) {flex-direction: column;}
+        .left {
+            flex: 1 1 900px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            @media screen and (min-width: 1450px) {flex: 1 1 1300px;}
+            @media screen and (max-width: 1068px) {flex: 1 1 100%;}
+        }
+    }
+    
+}
+.parameter {
+    &__title {margin-bottom: 5px;}
+    .descr {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        opacity: 0.75;
+        margin-bottom: 10px;
+    }
+    &__text {
+        width: 100%;
+        font-size: 12px;
+        padding: 12px;
+        color: #fff
+    }
+    &:last-child {
+        .parameter__text {
+            cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            overflow: hidden;
+            background: url("../img/configuration/icon/chevron-down.svg") no-repeat right 12px center, var(--Black-Deep-blue, #2E3745);  
+            border: 1px solid var(--Black-Deep-blue, #2E3745);
+        }
+    }
+}
+.upload {
+    width: 384px;
+    @media screen and (max-width: 1068px) {width: 100%;}
+    &__title {margin-bottom: 5px;}
+    &__descr {
+        font-size: 12px;
+        opacity: 0.75;
+        margin-bottom: 10px;
+    }
+    &__input {display: none;}
+    &-custom {
+        display: flex;
+        height: 214px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        margin-bottom: 15px;
+        @media screen and (max-width: 1068px) {margin: 0;}
+        &__title {
+            opacity: 0.8;
+            text-align: center;
+            font-size: 12px;
+            max-width: 224px;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .row {
+        width: 384px;
+        padding: 0 0 0 12.75px;
+        @media screen and (max-width: 1068px) {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+    }
+}
+.file {
+    &__item {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 5px 13px;
+        .delete {
+            background-color: transparent;
+        }
+    }
+    &__details {
+        display: flex;
+        width: 75%;
+    }
+    &__name {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        font-size: 14px;
+        span {opacity: 0.5;}
+    }
+}
+
+
+.presenters {
+    margin: 0 24px 48px;
+    @media screen and (max-width: 468px) {margin: 0 10px 32px;}
+    &__title {margin-bottom: 30px;}
+    .row {
+        display: flex; 
+        justify-content: space-between; 
+        gap: 60px;
+        flex-wrap: nowrap;
+        padding-bottom: 40px;
+        border-bottom: 1px solid var(--white-white-20, rgba(255, 255, 255, 0.20));
+        @media screen and (max-width: 1068px) {
+            flex-direction: column-reverse;
+        }
+    }
+    .add-presenters {
+        flex: 1 1 924.5px;
+        @media screen and (max-width: 1068px) {flex: 1 1 100%;}
+        @media screen and (min-width: 1445px) {flex: 1 1 1324.5px;}
+        #save {
+            padding: 11.5px 30px;
+        }
+    }
+}
+.main {
+    display: flex;
+    margin-bottom: 26px;
+    @media screen and (max-width: 644px) {flex-direction: column; gap: 15px;}
+    &__img {
+        padding: 18px 17px 17px 18px;
+        border-radius: 1000px;
+        border: 1px solid var(--Grey-Grey-transparent, rgba(55, 65, 81, 0.50));
+        background: var(--Black-Deep-blue-secondary, #232D3C);
+        margin-right: 40px;
+        align-self: start;
+    }
+    .info {
+        max-width: 45%;
+        @media screen and (max-width: 644px) {max-width: 100%;}
+        &:first-of-type {
+            margin-right: 25px;
+            @media screen and (max-width: 644px) {margin: 0;}
+        }
+        &__title {margin-bottom: 5px;}
+        &__descr {
+            opacity: 0.75;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        &__text {
+            font-size: 12px;
+            padding: 12px;
+            width: 100%;
+            color: #fff;
+        }
+    }
+}
+.role {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    &-descr {
+        opacity: 0.75;
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+}
+.switch {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    margin: 0 76px;
+    .round {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #04CAA6;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 34px;
+        &::before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 2px;
+            bottom: 2px;
+            background: #fff;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+        }
+    }
+    .moderator {
+        left: -79px;
+        color: #04CAA6;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        align-self: center;
+        font-size: 14px;
+    }
+    .presentor {
+        right: -73px; 
+        color: #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        align-self: center;
+        font-size: 14px;
+    }
+    & input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        &:checked {
+            & ~ .moderator {
+                color: #fff;
+            }
+            & ~ .presentor {
+                color: #04CAA6;
+            }
+            &:checked + .round::before {
+                -webkit-transform: translateX(20px);
+                -ms-transform: translateX(20px);
+                transform: translateX(20px);
+            }
+        }
+    }
+}
+
+.list-presenters {
+    width: fit-content;
+    margin: 0;
+    @media screen and (max-width: 1068px) {
+        display: flex; 
+        gap: 15px; 
+        flex-wrap: wrap;
+    }
+}
+.person {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    width: 384px;
+    margin-bottom: 15px;
+    @media screen and (max-width: 1068px) {margin: 0;}
+    &__img {
+        padding: 18px 17px 17px 18px;
+        border-radius: 1000px;
+        border: 1px solid var(--Grey-Grey-transparent, #37415180);
+        background: var(--Black-Deep-blue-secondary, #232D3C);
+        align-self: start;
+    }
+    .details {
+        align-self: center;
+        &__name {
+            font-size: 16px;
+            font-weight: 700;
+        }
+        &__email, &__role {
+            font-size: 14px;
+            line-height: 140%;
+            opacity: 0.5;
+        }
+    }
+    .btn {
+        padding: 0;
+        &s {
+            display: flex;
+            align-items: self-start;
+            justify-self: end;
+        }
+    }
+    &:first-of-type {
+        .btn-delete {display: none;}
+    }
+}
+
+.btn-group-down {
+    padding: 0 24px 123px;
+    @media screen and (max-width: 652px) {padding-bottom: 32px;}
+    @media screen and (max-width: 468px) {padding: 0 10px 32px;}
+}

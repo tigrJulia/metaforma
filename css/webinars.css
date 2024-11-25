@@ -1,0 +1,232 @@
+.webinars {
+  background: var(--Black-Black, #09091A);
+  width: 100%;
+  min-height: 100vh;
+}
+.webinars .cap {
+  margin: 28px 0 48px 24px;
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 468px) {
+  .webinars .cap {
+    margin: 28px 10px 32px;
+  }
+}
+.webinars__title {
+  margin: auto 0;
+}
+.webinars .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0 24px;
+  padding-bottom: 25px;
+}
+@media screen and (max-width: 468px) {
+  .webinars .row {
+    margin: 0 10px;
+  }
+}
+
+.add {
+  display: flex;
+  gap: 8px;
+  color: #fff;
+  background: #DD5313;
+  border-radius: 10px;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+.add:hover {
+  background: #bb4b17;
+  transition: all ease 0.3s;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 318px;
+  background: var(--Black-Dark-blue, #17202E);
+  border: none;
+  padding: 0;
+  overflow: hidden;
+  color: #fff;
+}
+@media screen and (max-width: 755px) and (min-width: 700px) {
+  .card {
+    width: 290px;
+  }
+}
+@media screen and (max-width: 511px) {
+  .card {
+    width: 100%;
+  }
+}
+.card__img {
+  width: 100%;
+}
+.card__time {
+  opacity: 0.75;
+  font-size: 14px;
+}
+.card__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.card .wrapper {
+  margin: 24px 24px 20px;
+  height: 100%;
+}
+@media screen and (max-width: 755px) and (min-width: 700px) {
+  .card .wrapper {
+    margin: 20px 20px 16px;
+  }
+}
+.card .wrapper .head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.card .footer {
+  border-top: 1px solid var(--white-white-20, rgba(255, 255, 255, 0.2));
+  margin: 0 24px 24px;
+  padding: 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  justify-self: end;
+}
+@media screen and (max-width: 755px) and (min-width: 700px) {
+  .card .footer {
+    margin: 0 20px 20px;
+    padding: 16px 0 0;
+  }
+}
+
+.more {
+  position: relative;
+}
+.more .dropdown-menu {
+  width: 114px;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #232D3C;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.more .dropdown-item {
+  margin-bottom: 12px;
+  padding: 0;
+}
+.more .dropdown-item:last-child {
+  margin-bottom: 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(55, 65, 81, 0.5019607843);
+}
+.more .dropdown-item:last-child > button {
+  color: #DD5313;
+}
+.more .dropdown-item:hover {
+  opacity: 0.7;
+  background: #232D3C;
+  transition: all ease 0.3s;
+}
+.more .dropdown-item > button {
+  background: transparent;
+  color: #FFF;
+  font-size: 13px;
+  width: 100%;
+  text-align: left;
+}
+
+.btn-more {
+  background: transparent;
+}
+
+.start {
+  padding: 10.5px 33px;
+  border-radius: 10px;
+  background: var(--Black-Deep-blue, #2E3745);
+  color: #fff;
+  font-size: 14px;
+}
+.start:hover {
+  color: #DD5313;
+  transition: all ease 0.3s;
+}
+@media screen and (max-width: 755px) and (min-width: 700px) {
+  .start {
+    padding: 10.5px 26px;
+  }
+}
+@media screen and (max-width: 335px) {
+  .start {
+    width: 50%;
+    padding: 10.5px 5px;
+    text-align: center;
+  }
+}
+
+.links {
+  padding: 10.5px 21px;
+  display: flex;
+  gap: 8px;
+  border-radius: 10px;
+  background: var(--Accent-Orange, #DD5313);
+  color: #fff;
+  font-size: 14px;
+}
+.links:hover {
+  background-color: var(--Accent-Orange-Hover, #bb4b17);
+  transition: all ease 0.3s;
+}
+@media screen and (max-width: 755px) and (min-width: 700px) {
+  .links {
+    padding: 10.5px 15px;
+  }
+}
+@media screen and (max-width: 335px) {
+  .links {
+    width: 50%;
+    padding: 10.5px 5px;
+    justify-content: center;
+  }
+}
+.links__container {
+  background: var(--Black-Black, #09091A);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  padding: 48px 138px 45px;
+}
+
+.modal-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--black-deep-blue-50, rgba(46, 55, 69, 0.5019607843));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.close-btn {
+  background-color: transparent;
+}
+.close-btn:hover {
+  opacity: 0.7;
+  transition: all ease 0.3s;
+}
+
+.modal-active {
+  opacity: 1;
+  pointer-events: all;
+  z-index: 10;
+}
